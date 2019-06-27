@@ -10,18 +10,25 @@ coverage:
   status:
     project:
       default:
-        threshold: 2%
-      patch: yes
-      changes: no
+        default: false
       service_one:
         flags: service1
         target: 80%
+        threshold: 2%
+        patch: yes
+        changes: no
       service_two:
         flags: service2
         target: 80%
+        threshold: 2%
+        patch: yes
+        changes: no
       service_three:
         flags: service3
         target: 80%
+        threshold: 2%
+        patch: yes
+        changes: no
 
 flags:
   service1:
@@ -33,6 +40,3 @@ flags:
   service3:
     paths:
       - service3/
-
-# comments are useless, considering wrong coverage reports
-comment: no
