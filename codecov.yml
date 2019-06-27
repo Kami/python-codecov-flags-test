@@ -40,3 +40,5 @@ flags:
   service3:
     paths:
       - service3/
+
+comment: no
