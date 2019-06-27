@@ -14,6 +14,6 @@ Repository for testing codecov.io flags functionality with a monorepo setup.
 
 [![Codecov](https://codecov.io/github/Kami/python-codecov-flags-test/badge.svg?branch=master&service=github&flags=service2)](https://codecov.io/github/Kami/python-codecov-flags-test?branch=master&flags=service2)
 
-### Service THree (service3/ sub-directory)
+### Service Three (service3/ sub-directory)
 
 [![Codecov](https://codecov.io/github/Kami/python-codecov-flags-test/badge.svg?branch=master&service=github&flags=service3)](https://codecov.io/github/Kami/python-codecov-flags-test?branch=master&flags=service3)
