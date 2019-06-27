@@ -29,7 +29,7 @@ matrix:
         - codecov --flags service3
 
 install:
-  - pip install -r requirements-tests.txt
+  - pip install -r requirements-test.txt
 
 cache:
   apt: true
