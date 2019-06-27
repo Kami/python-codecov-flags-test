@@ -1,0 +1,37 @@
+language: python
+sudo: false
+dist: xenial
+os: linux
+
+matrix:
+  fast_finish: false
+  include:
+    - env: ENV=tests-service1
+      python: 2.7
+      script:
+        # Clear any left over coverage data from other services
+        - rm -f .coverage
+        - PYTHONPATH=service1 nosetests --with-coverage --cover-erase --cover-tests --cover-package=src,tests --rednose --immediate -sv service1/tests/unit/
+        - codecov --flags service1
+    - env: ENV=tests-service2
+      python: 2.7
+      script:
+        # Clear any left over coverage data from other services
+        - rm -f .coverage
+        - PYTHONPATH=service2 nosetests --with-coverage --cover-erase --cover-tests --cover-package=src,tests --rednose --immediate -sv service2/tests/unit/
+        - codecov --flags service2
+    - env: ENV=tests-service3
+      python: 2.7
+      script:
+        # Clear any left over coverage data from other services
+        - rm -f .coverage
+        - PYTHONPATH=service3 nosetests --with-coverage --cover-erase --cover-tests --cover-package=src,tests --rednose --immediate -sv service3/tests/unit/
+        - codecov --flags service3
+
+install:
+  - pip install -r requirements-tests.txt
+
+cache:
+  apt: true
+  directories:
+    - $HOME/.cache/pip # pip cache

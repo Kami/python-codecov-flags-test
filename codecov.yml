@@ -1,0 +1,24 @@
+coverage:
+  status:
+    project:
+      default: off
+      service_one:
+        flags: service1
+        target: 80%
+      service_two:
+        flags: service2
+        target: 80%
+      service_three:
+        flags: service3
+        target: 80%
+
+flags:
+  service1:
+    paths:
+      - service1/
+  service2:
+    paths:
+      - service2/
+  service3:
+    paths:
+      - service3/
